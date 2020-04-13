@@ -1,16 +1,25 @@
-@import '../utilities/variables';
+@import '../utilities/variables','../utilities/mixins';
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
 
 .container {
     padding: 0 10px;
+
+    @include media{
+      @include base-display;
+      max-width: 1400px;
+    }
   }
   
   .row {
     display: flex;
     flex-direction: column;
     padding: 1em 10px;
+
+    @include media{
+      flex-direction: row;
+    }
   }
   
   [class^=col] {
@@ -19,8 +28,28 @@
     min-height: 25px;
     padding: 10px;
     border-radius: 5px;
+
+    @include media{
+      display: flex;
+      justify-content: center;
+      margin-top: 0;
+      align-items: center;
+    }
   }
   
+  [class^=col] + [class^=col] {
+    @include media{
+      margin-left: 10px;
+      }
+  }
+
+  @for $x from 1 through 12{
+    @include media{
+      .col-#{$x}{
+        flex-basis: (($x/12)*100%);
+      }
+    }
+  }
   .theme.col-1 {
     background-color: $info-background-color;
   }

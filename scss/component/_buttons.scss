@@ -1,34 +1,50 @@
-@import '../utilities/variables';
+@import '../utilities/variables','../utilities/mixins';
 /* ============================================= */
 /*              Buttons                          */
 /* ============================================= */
 
 .btn {
-    margin-top: 15px;
-    width: 100%;
-    color: #fff;
-    border: none;
-    padding: 10px 0;
-    text-transform: uppercase;
-    border-radius: 5px;
-  }
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
   
-  .default {
-    background-color: #51ddfc;
-  }
+  transition-property: background-color;
+  transition: background-color .6s ease-in .3s;
   
-  .error {
-    background-color: $theme-9-background-color;
+  @include media{
+      padding: 10px 30px;  
   }
+}
+.btn + .btn {
+  @include media{
+    margin-left: 10px;
+  }
+} 
+
+.btn:hover{
+  background-color:lighten($button-color, 15%);
+}
   
-  .info {
-    background-color: $info-background-color;
-  }
-  
-  .success {
-    background-color: #63cc82;
-  }
-  
-  .warning {
-    background-color: #fd7856;
-  }
+.default {
+  background-color: #51ddfc;
+}
+
+.error {
+  background-color: $theme-9-background-color;
+}
+
+.info {
+  background-color: $info-background-color;
+}
+
+.success {
+  background-color: #63cc82;
+}
+
+.warning {
+  background-color: #fd7856;
+}
