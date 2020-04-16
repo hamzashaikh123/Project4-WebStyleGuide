@@ -491,7 +491,7 @@ a {
     [class^=col] {
       display: flex;
       justify-content: center;
-      margin-top: 0 auto;
+      margin: 0 auto;
       align-items: center; } }
 
 @media (min-width: 768px) {
@@ -608,10 +608,6 @@ a {
   background-color: #80e8d1; }
 
 /* line 100, ../../../../../../../../../../../../../Users/hamzashaikh/Documents/Treehouse Coding/Projects/Project4-WebStyleGuide/scss/component/_grid.scss */
-.col-7 {
-  margin: 0 auto; }
-
-/* line 103, ../../../../../../../../../../../../../Users/hamzashaikh/Documents/Treehouse Coding/Projects/Project4-WebStyleGuide/scss/component/_grid.scss */
 .card {
   flex-basis: 100%; }
 

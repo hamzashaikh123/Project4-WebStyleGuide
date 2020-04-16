@@ -32,7 +32,7 @@
     @include media{
       display: flex;
       justify-content: center;
-      margin-top: 0 auto ;
+      margin: 0 auto ;
       align-items: center;
     }
   }
@@ -96,9 +96,6 @@
   
   .theme.col-12 {
     background-color: #80e8d1;
-  }
-  .col-7{
-    margin: 0 auto;
   }
   .card {
     flex-basis: 100%;
